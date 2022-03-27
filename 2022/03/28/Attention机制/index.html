@@ -27,21 +27,21 @@
 <meta property="og:site_name" content="nyaruP">
 <meta property="og:description" content="本文大部分借鉴了DaNing的博客，宁tql。  历史Attention机制最早由Google Mind于 _Recurrent Models of Visual Attention_ 提出，用于解决计算机视觉领域的问题。之后，Bahdanau等人在论文 _Neural Machine Translation by Jointly Learning to Align and Translate_">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://nyarup.github.io/2022/03/28/Attention%E6%9C%BA%E5%88%B6/Users/toumakpoi/Desktop/1/encoder_decoder.png">
-<meta property="og:image" content="http://nyarup.github.io/2022/03/28/Attention%E6%9C%BA%E5%88%B6/Users/toumakpoi/Desktop/1/machine_translation.png">
-<meta property="og:image" content="http://nyarup.github.io/2022/03/28/Attention%E6%9C%BA%E5%88%B6/Users/toumakpoi/Desktop/1/machine_translation_decoder.png">
-<meta property="og:image" content="http://nyarup.github.io/2022/03/28/Attention%E6%9C%BA%E5%88%B6/Users/toumakpoi/Desktop/1/encoder_decoder_attention.png">
-<meta property="og:image" content="http://nyarup.github.io/2022/03/28/Attention%E6%9C%BA%E5%88%B6/Users/toumakpoi/Desktop/1/attention_weight.png">
-<meta property="og:image" content="http://nyarup.github.io/2022/03/28/Attention%E6%9C%BA%E5%88%B6/Users/toumakpoi/Desktop/1/attention_qkv.png">
-<meta property="og:image" content="http://nyarup.github.io/2022/03/28/Attention%E6%9C%BA%E5%88%B6/Users/toumakpoi/Desktop/1/attention_qkv_2.png">
+<meta property="og:image" content="http://nyarup.github.io/2022/03/28/Attention%E6%9C%BA%E5%88%B6/encoder_decoder.png">
+<meta property="og:image" content="http://nyarup.github.io/2022/03/28/Attention%E6%9C%BA%E5%88%B6/machine_translation.png">
+<meta property="og:image" content="http://nyarup.github.io/2022/03/28/Attention%E6%9C%BA%E5%88%B6/machine_translation_decoder.png">
+<meta property="og:image" content="http://nyarup.github.io/2022/03/28/Attention%E6%9C%BA%E5%88%B6/encoder_decoder_attention.png">
+<meta property="og:image" content="http://nyarup.github.io/2022/03/28/Attention%E6%9C%BA%E5%88%B6/attention_weight.png">
+<meta property="og:image" content="http://nyarup.github.io/2022/03/28/Attention%E6%9C%BA%E5%88%B6/attention_qkv.png">
+<meta property="og:image" content="http://nyarup.github.io/2022/03/28/Attention%E6%9C%BA%E5%88%B6/attention_qkv_2.png">
 <meta property="article:published_time" content="2022-03-27T17:22:27.000Z">
-<meta property="article:modified_time" content="2022-03-27T17:29:14.587Z">
+<meta property="article:modified_time" content="2022-03-27T17:36:07.259Z">
 <meta property="article:author" content="nyaruP">
 <meta property="article:tag" content="paper">
 <meta property="article:tag" content="nlp">
 <meta property="article:tag" content="ml">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://nyarup.github.io/2022/03/28/Attention%E6%9C%BA%E5%88%B6/Users/toumakpoi/Desktop/1/encoder_decoder.png">
+<meta name="twitter:image" content="http://nyarup.github.io/2022/03/28/Attention%E6%9C%BA%E5%88%B6/encoder_decoder.png">
 
 <link rel="canonical" href="http://nyarup.github.io/2022/03/28/Attention%E6%9C%BA%E5%88%B6/">
 
@@ -220,7 +220,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-03-28 01:22:27 / 修改时间：01:29:14" itemprop="dateCreated datePublished" datetime="2022-03-28T01:22:27+08:00">2022-03-28</time>
+              <time title="创建时间：2022-03-28 01:22:27 / 修改时间：01:36:07" itemprop="dateCreated datePublished" datetime="2022-03-28T01:22:27+08:00">2022-03-28</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -248,14 +248,14 @@
 </blockquote>
 <h2 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h2><p>Attention机制最早由Google Mind于 _Recurrent Models of Visual Attention_ 提出，用于解决计算机视觉领域的问题。之后，Bahdanau等人在论文 _Neural Machine Translation by Jointly Learning to Align and Translate_ 中采用Seq2Seq+Attention模型进行机器翻译，将Attention机制首次应用于NLP领域。2017年，Google的机器翻译团队发表了 _Attention is All You Need_ ，提出了基于Attention机制的Transformer模型，在后续的博客中会具体介绍。<span id="more"></span></p>
 <h2 id="Seq2Seq模型"><a href="#Seq2Seq模型" class="headerlink" title="Seq2Seq模型"></a>Seq2Seq模型</h2><p>Seq2Seq是一种不限制输入输出序列长度的模型，被广泛应用于NLP各种任务中。Seq2Seq模型采用了Encoder-Decoder结构。其中Encoder将所有的输入序列编码为一个统一的语义向量，保存在其最后的hidden state中，并作为Decoder的输入。Decoder再对输入向量解码得到输出结果。</p>
-<p><img src="/2022/03/28/Attention%E6%9C%BA%E5%88%B6/Users\toumakpoi\Desktop\1\encoder_decoder.png" alt="Encoder-Decoder结构" title="Encoder-Decoder结构"></p>
+<p><img src="/2022/03/28/Attention%E6%9C%BA%E5%88%B6/encoder_decoder.png" alt="Encoder-Decoder结构" title="Encoder-Decoder结构"></p>
 <p>相较于原始的RNN，这种改进使得Seq2Seq模型的输入和输出可以是不同维度的。也正是由于这点，Seq2Seq模型的应用非常广泛，被使用在机器翻译、文本摘要、机器阅读理解和语音识别等等领域。下面我们通过机器翻译应用的一个例子来介绍Seq2Seq模型的工作过程。</p>
-<p><img src="/2022/03/28/Attention%E6%9C%BA%E5%88%B6/Users\toumakpoi\Desktop\1\machine_translation.png" alt="Seq2Seq的机器翻译案例" title="Seq2Seq的机器翻译案例"></p>
+<p><img src="/2022/03/28/Attention%E6%9C%BA%E5%88%B6/machine_translation.png" alt="Seq2Seq的机器翻译案例" title="Seq2Seq的机器翻译案例"></p>
 <ul>
 <li><p>在Encoder的 $ t=1 $ 时，”早“作为输入 $x_{1}$ 到第一个节点中。在 $t=2$ 时，计算得到的hidden state $h_{1}$ 与下一个输入 $x_{2}$ （即”上“）一同送入下一个节点中。同理，$t=3$ 时得到最后的hidden state $h_{3}$ ，这就是Encoder对于输入编码最终得到的语义向量。</p>
 </li>
 <li><p>在Decoder中，$t=1$ 时，Encoder编码得到的语义向量 $h_{3}$ 与标识符<code>&lt;start&gt;</code>共同作为输入并开始解码。解码过程与编码类似，可以表示为下图的过程。</p>
-<p><img src="/2022/03/28/Attention%E6%9C%BA%E5%88%B6/Users\toumakpoi\Desktop\1\machine_translation_decoder.png" alt="Decoder的数据流图" title="Decoder的数据流图"></p>
+<p><img src="/2022/03/28/Attention%E6%9C%BA%E5%88%B6/machine_translation_decoder.png" alt="Decoder的数据流图" title="Decoder的数据流图"></p>
 <ol>
 <li>RNN节点首先接受当前时间步的输入向量 $x_{t}$ （即图中红色点所表示的部分）和上一步传递的语义向量（即图中绿色点表示的部分），并将两者用于计算得到当前时间步的语义向量 $h_{t}$ （即图中蓝色点表示的部分）。</li>
 <li>得到语义向量 $h_{t}$ 后，通过全连接层和softmax得到输出的概率分布，并取概率最高的词作为输出（即图中的橘红色点）。</li>
@@ -271,19 +271,19 @@
 </li>
 </ul>
 <h2 id="Attention机制的提出"><a href="#Attention机制的提出" class="headerlink" title="Attention机制的提出"></a>Attention机制的提出</h2><p>Attention机制的提出在一定程度上解决了Seq2Seq模型的缺陷。在Attention机制中，Encoder不再是只传递一个固定长度的向量给Decoder。对于decoder每个时间步 $t$ ，Attention都会计算一个对应的权重向量 $w_t$ ，并与Encoder每一步的状态加权求和，再将结果和上一步状态 $h_{t-1}$ concat后进行计算。</p>
-<p><img src="/2022/03/28/Attention%E6%9C%BA%E5%88%B6/Users\toumakpoi\Desktop\1\encoder_decoder_attention.png" alt="Attention机制在Seq2Seq模型中的例子" title="Attention机制在Seq2Seq模型中的例子"></p>
+<p><img src="/2022/03/28/Attention%E6%9C%BA%E5%88%B6/encoder_decoder_attention.png" alt="Attention机制在Seq2Seq模型中的例子" title="Attention机制在Seq2Seq模型中的例子"></p>
 <p>例如，对于之前提到的问题，在 $t=1$ 时刻，Attention机制先计算出注意力向量 $c_1$ 。</p>
 <script type="math/tex; mode=display">c_1=h_1 \cdot w_{11} + h_2 \cdot w_{12} + h_3 \cdot w_{13}</script><p>然后将 $c_1$ 与前一个状态的输入concat到一起作为新的输入，并计算得到结果。</p>
 <script type="math/tex; mode=display">\overline{h}_0=concat(h_3,c_1)</script><p>重复这个过程，直到结束。对于Decoder不同时间步节点，对Encoder的权重分布都不同，即注意力不同。例如，在翻译“Good”时，对“好”的关注应该最多，此时表现为 $w_{13}$ 显著大于 $w_{12}$ 和 $w_{13}$ 。</p>
 <h2 id="注意力权重的计算"><a href="#注意力权重的计算" class="headerlink" title="注意力权重的计算"></a>注意力权重的计算</h2><p>如图所示，我们定义 $\overline{h}_s$ 为Encoder各个时间步的hidden state， $h_t$  为当前时间步Decoder的的hidden state（由原模型计算得出）， $\tilde{h}_t$ 则为Attention Layer的输出。</p>
-<p><img src="/2022/03/28/Attention%E6%9C%BA%E5%88%B6/Users\toumakpoi\Desktop\1\attention_weight.png" alt="注意力向量计算过程" title="注意力向量计算过程"></p>
+<p><img src="/2022/03/28/Attention%E6%9C%BA%E5%88%B6/attention_weight.png" alt="注意力向量计算过程" title="注意力向量计算过程"></p>
 <p>对于每个 $h_t$ ，其对应每个 $\overline{h}_S$ 都有权重 $a_t$ ， $a_t$ 则是由相似度评分 $score$ 通过 $Softmax$ 函数计算得到。</p>
 <script type="math/tex; mode=display">a_t(s)=\frac{exp(score(h_t,\overline{h}_s))}{\sum_{s^{\prime}}(score(h_t,\overline{h}_{s^\prime}))}</script><p>其中， $score$ 可以通过但不限于以下方法计算得到。</p>
 <script type="math/tex; mode=display">score(h_t,\overline{h}_s)=\begin{cases} h_t^T\overline{h}_s & Dot \\ h_t^TW_a\overline{h}_s & General \\ v_a^Ttanh(W_a\cdot concat(h_t,\overline{h}_s)) & Concat \end{cases}</script><p>然后，根据得到的注意力权重 $a_t$ ，可以生成注意力向量 $c_t$ 。</p>
 <script type="math/tex; mode=display">c_t=\sum_sa_t(s)\cdot\overline{h}_s</script><p>最后，将注意力向量 $c_t$ 与原来的hidden state $h_t$ concat到一起。</p>
 <script type="math/tex; mode=display">\tilde{h}_t=tanh(W_c\cdot[c_t;h_t])</script><p>其中 $W_c$ 为恢复矩阵，用于统一 $c_t$ 和 $h_t$ concat后向量的维度。</p>
 <h2 id="深入理解Attention机制"><a href="#深入理解Attention机制" class="headerlink" title="深入理解Attention机制"></a>深入理解Attention机制</h2><p>实际上，Attention机制的使用并不依赖于Seq2Seq模型，在抛弃了Seq2Seq后，我们仍然说Attention的本质是对某些数据分配某些权重参数，然后再对它们进行合并。比较主流的Attention机制是采用键值对查询的方式，即一个查询（Query）通过一系列键值对（\<Key - value>）的映射。</Key></p>
-<p><img src="/2022/03/28/Attention%E6%9C%BA%E5%88%B6/Users\toumakpoi\Desktop\1\attention_qkv.png" alt="Attention机制的扩展" title="Attention机制的扩展"></p>
+<p><img src="/2022/03/28/Attention%E6%9C%BA%E5%88%B6/attention_qkv.png" alt="Attention机制的扩展" title="Attention机制的扩展"></p>
 <p>具体来说，其工作机制可以分成三步：</p>
 <ol>
 <li>计算Query与Key的相似度，得到权值，常用的相似度函数有点积、拼接、感知机等。</li>
@@ -294,7 +294,7 @@
 <script type="math/tex; mode=display">\begin{aligned}
 & \alpha _i = \operatorname {softmax}(\operatorname {similarity}(QK^T)) \\
 & attention((K, V), Q) = \sum_{i=1}^N \alpha_i v_i \quad(v_i \in V)
-\end{aligned}</script><p><img src="/2022/03/28/Attention%E6%9C%BA%E5%88%B6/Users\toumakpoi\Desktop\1\attention_qkv_2.png" alt="Attention机制的扩展流程" title="Attention机制的扩展流程"></p>
+\end{aligned}</script><p><img src="/2022/03/28/Attention%E6%9C%BA%E5%88%B6/attention_qkv_2.png" alt="Attention机制的扩展流程" title="Attention机制的扩展流程"></p>
 <p>在自然语言处理任务中，往往 Key 和 Value 是相同的。需要注意的是，计算出来的Attention Value是一个向量，代表序列元素$x_j$的编码向量，包含了元素$x_j$的上下文关系，即同时包含全局联系和局部联系。全局联系很好理解，因为在计算时考虑了该元素与其他所有元素的相似度计算；而局部联系则是因为在对元素$x_j$进行编码时，重点考虑与其相似度较高的局部元素，尤其是其本身。</p>
 <h2 id="Attention机制的优劣"><a href="#Attention机制的优劣" class="headerlink" title="Attention机制的优劣"></a>Attention机制的优劣</h2><p>相比于传统的RNN和CNN，Attention机制具有以下优点：</p>
 <ul>
