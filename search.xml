@@ -4,6 +4,7 @@
     <title>Markdown扩展语法</title>
     <url>/2022/03/27/Markdown%E6%89%A9%E5%B1%95%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<h2 id="可用性"><a href="#可用性" class="headerlink" title="可用性"></a>可用性</h2><p>并非所有的 Markdown 应用程序都支持扩展语法。你需要确认你所使用的应用程序是否支持你所需要使用的扩展语法。如果不支持，则有可能是需要开启相应的扩展模块。</p>
+<span id="more"></span>
 <h2 id="表格（Tables）"><a href="#表格（Tables）" class="headerlink" title="表格（Tables）"></a>表格（Tables）</h2><p>如需添加表格，请使用三个或更多个连字符（<code>---</code>）来为每个列创建表头，并使用管道符（<code>|</code>）来分隔每个列。为兼容考虑，你还应该在行的两侧添加管道符。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">| Syntax      | Description |</span><br><span class="line">| ----------- | ----------- |</span><br><span class="line">| Header      | Title       |</span><br><span class="line">| Paragraph   | Text        |</span><br></pre></td></tr></table></figure>
 <p>渲染效果如下所示：</p>
