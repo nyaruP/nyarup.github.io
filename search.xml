@@ -1,94 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Markdown扩展语法</title>
-    <url>/2022/03/27/Markdown%E6%89%A9%E5%B1%95%E8%AF%AD%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="可用性"><a href="#可用性" class="headerlink" title="可用性"></a>可用性</h2><p>并非所有的 Markdown 应用程序都支持扩展语法。你需要确认你所使用的应用程序是否支持你所需要使用的扩展语法。如果不支持，则有可能是需要开启相应的扩展模块。</p>
-<span id="more"></span>
-<h2 id="表格（Tables）"><a href="#表格（Tables）" class="headerlink" title="表格（Tables）"></a>表格（Tables）</h2><p>如需添加表格，请使用三个或更多个连字符（<code>---</code>）来为每个列创建表头，并使用管道符（<code>|</code>）来分隔每个列。为兼容考虑，你还应该在行的两侧添加管道符。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">| Syntax      | Description |</span><br><span class="line">| ----------- | ----------- |</span><br><span class="line">| Header      | Title       |</span><br><span class="line">| Paragraph   | Text        |</span><br></pre></td></tr></table></figure>
-<p>渲染效果如下所示：</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>Syntax</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Header</td>
-<td>Title</td>
-</tr>
-<tr>
-<td>Paragraph</td>
-<td>Text</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>单元格（cell）宽度是可变的，如下所示。渲染效果相同。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">| Syntax | Description |</span><br><span class="line">| --- | ----------- |</span><br><span class="line">| Header | Title |</span><br><span class="line">| Paragraph | Text |</span><br></pre></td></tr></table></figure>
-<h3 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h3><p>通过在标题行中的连字符（hyphens）的左侧或右侧或两侧添加冒号（<code>:</code>），可以将对应列中的文本向左或向右或居中对齐。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">| Syntax      | Description | Test Text     |</span><br><span class="line">| :---        |    :----:   |          ---: |</span><br><span class="line">| Header      | Title       | Here&#x27;s this   |</span><br><span class="line">| Paragraph   | Text        | And more      |</span><br></pre></td></tr></table></figure>
-<p>渲染效果如下所示：</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Syntax</th>
-<th style="text-align:center">Description</th>
-<th style="text-align:right">Test Text</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">Header</td>
-<td style="text-align:center">Title</td>
-<td style="text-align:right">Here’s this</td>
-</tr>
-<tr>
-<td style="text-align:left">Paragraph</td>
-<td style="text-align:center">Text</td>
-<td style="text-align:right">And more</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="围栏代码块（Fenced-Code-Blocks）"><a href="#围栏代码块（Fenced-Code-Blocks）" class="headerlink" title="围栏代码块（Fenced Code Blocks）"></a>围栏代码块（Fenced Code Blocks）</h2><p>Markdown 的基本语法允许你通过缩进四个空格或一个制表符来创建 <a href="https://www.markdown.xyz/basic-syntax#code-blocks">代码块</a> 。如果你觉得不方便，可以试试围栏代码块（fenced code blocks）。根据 Markdown 解析器或编辑器的不同，代码块的前后可以使用三个反引号（`````）或三个波浪号（~~~）来标记围栏代码块。这有什么优势吗？你不必费力缩进任何行了！</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">```</span><br><span class="line">&#123;</span><br><span class="line">  &quot;firstName&quot;: &quot;John&quot;,</span><br><span class="line">  &quot;lastName&quot;: &quot;Smith&quot;,</span><br><span class="line">  &quot;age&quot;: 25</span><br><span class="line">&#125;</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
-<p>渲染效果如下所示：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;firstName&quot;: &quot;John&quot;,</span><br><span class="line">  &quot;lastName&quot;: &quot;Smith&quot;,</span><br><span class="line">  &quot;age&quot;: 25</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="语法高亮"><a href="#语法高亮" class="headerlink" title="语法高亮"></a>语法高亮</h3><p>许多 Markdown 解析器都支持围栏代码块的语法高亮功能。此功能允许你为编写代码所用的编程语言添加带颜色的语法高亮显示。如需添加语法高亮，请在围栏代码块前的反引号旁指定所用的编程语言。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">```json</span><br><span class="line">&#123;</span><br><span class="line">  &quot;firstName&quot;: &quot;John&quot;,</span><br><span class="line">  &quot;lastName&quot;: &quot;Smith&quot;,</span><br><span class="line">  &quot;age&quot;: 25</span><br><span class="line">&#125;</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
-<p>渲染效果如下所示：</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;firstName&quot;</span>: <span class="string">&quot;John&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;lastName&quot;</span>: <span class="string">&quot;Smith&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;age&quot;</span>: <span class="number">25</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="脚注（Footnotes）"><a href="#脚注（Footnotes）" class="headerlink" title="脚注（Footnotes）"></a>脚注（Footnotes）</h2><p>脚注（Footnotes）允许你添加注释（notes）和引用（references），而不会使文档正文混乱。当你创建脚注时，带有链接的上标数字会出现在你引用脚注的位置。 读者可以单击链接以跳转至页面底部的脚注内容处。</p>
-<p>要创建一个脚注的引用，请在方括号中添加一个插入符（caret）以及一个标识符，标识符可以是数字或单词，但不能包含空格或制表符。标识符的作用仅是将脚注的引用和脚注本身进行关联，在输出中，脚注按顺序编号。</p>
-<p>另一种创建脚注的方式是在方括号内添加一个插入符（caret）以及一个数字，后面跟着冒号和文本，即（<code>[^1]: My footnote.</code>）。这种方式让你不必在文档末尾添加脚注。你可以将脚注放到除列表（lists）、块引用（block quotes）和表格（tables）之外的任何位置上。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Here&#x27;s a simple footnote,[^1] and here&#x27;s a longer one.[^bignote]</span><br><span class="line"></span><br><span class="line">[^1]: This is the first footnote.</span><br><span class="line"></span><br><span class="line">[^bignote]: Here&#x27;s one with multiple paragraphs and code.</span><br><span class="line"></span><br><span class="line">    Indent paragraphs to include them in the footnote.</span><br><span class="line"></span><br><span class="line">    `&#123; my code &#125;`</span><br><span class="line"></span><br><span class="line">    Add as many paragraphs as you like.</span><br></pre></td></tr></table></figure>
-<p>渲染效果如下所示：</p>
-<p>Here’s a simple footnote,<a href="https://www.markdown.xyz/extended-syntax/#fn:1">1</a> and here’s a longer one.<a href="https://www.markdown.xyz/extended-syntax/#fn:bignote">2</a></p>
-<ol>
-<li><p>This is the first footnote. <a href="https://www.markdown.xyz/extended-syntax/#fnref:1">↩</a></p>
-</li>
-<li><p>Here’s one with multiple paragraphs and code.</p>
-<p>Indent paragraphs to include them in the footnote.</p>
-<p><code>&#123; my code &#125;</code></p>
-<p>Add as many paragraphs as you like. <a href="https://www.markdown.xyz/extended-syntax/#fnref:bignote">↩</a></p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>markdown</tag>
-        <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Markdown基本语法</title>
     <url>/2022/03/27/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<blockquote>
@@ -189,6 +101,94 @@
 <p>出于安全原因，并非所有 Markdown 编辑器都支持在 Markdown 文档中添加 HTML，某些编辑器只支持 HTML 标签的子集。如有疑问，请查看 Markdown 编辑器的文档。</p>
 <p>对于 HTML 的块级元素 <code>&lt;div&gt;</code>、<code>&lt;table&gt;</code>、<code>&lt;pre&gt;</code> 和 <code>&lt;p&gt;</code>，请在其前后使用空行与其它内容进行分隔。尽量不要使用制表符（tabs）或空格（spaces）对 HTML 标签做缩进，否则将影响格式。</p>
 <p>在 HTML 块级标签内不能使用 Markdown 语法。例如 <code>&lt;p&gt;italic and **bold**&lt;/p&gt;</code> 将不起作用。</p>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown扩展语法</title>
+    <url>/2022/03/27/Markdown%E6%89%A9%E5%B1%95%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="可用性"><a href="#可用性" class="headerlink" title="可用性"></a>可用性</h2><p>并非所有的 Markdown 应用程序都支持扩展语法。你需要确认你所使用的应用程序是否支持你所需要使用的扩展语法。如果不支持，则有可能是需要开启相应的扩展模块。</p>
+<span id="more"></span>
+<h2 id="表格（Tables）"><a href="#表格（Tables）" class="headerlink" title="表格（Tables）"></a>表格（Tables）</h2><p>如需添加表格，请使用三个或更多个连字符（<code>---</code>）来为每个列创建表头，并使用管道符（<code>|</code>）来分隔每个列。为兼容考虑，你还应该在行的两侧添加管道符。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">| Syntax      | Description |</span><br><span class="line">| ----------- | ----------- |</span><br><span class="line">| Header      | Title       |</span><br><span class="line">| Paragraph   | Text        |</span><br></pre></td></tr></table></figure>
+<p>渲染效果如下所示：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Header</td>
+<td>Title</td>
+</tr>
+<tr>
+<td>Paragraph</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>单元格（cell）宽度是可变的，如下所示。渲染效果相同。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">| Syntax | Description |</span><br><span class="line">| --- | ----------- |</span><br><span class="line">| Header | Title |</span><br><span class="line">| Paragraph | Text |</span><br></pre></td></tr></table></figure>
+<h3 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h3><p>通过在标题行中的连字符（hyphens）的左侧或右侧或两侧添加冒号（<code>:</code>），可以将对应列中的文本向左或向右或居中对齐。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">| Syntax      | Description | Test Text     |</span><br><span class="line">| :---        |    :----:   |          ---: |</span><br><span class="line">| Header      | Title       | Here&#x27;s this   |</span><br><span class="line">| Paragraph   | Text        | And more      |</span><br></pre></td></tr></table></figure>
+<p>渲染效果如下所示：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Syntax</th>
+<th style="text-align:center">Description</th>
+<th style="text-align:right">Test Text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Header</td>
+<td style="text-align:center">Title</td>
+<td style="text-align:right">Here’s this</td>
+</tr>
+<tr>
+<td style="text-align:left">Paragraph</td>
+<td style="text-align:center">Text</td>
+<td style="text-align:right">And more</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="围栏代码块（Fenced-Code-Blocks）"><a href="#围栏代码块（Fenced-Code-Blocks）" class="headerlink" title="围栏代码块（Fenced Code Blocks）"></a>围栏代码块（Fenced Code Blocks）</h2><p>Markdown 的基本语法允许你通过缩进四个空格或一个制表符来创建 <a href="https://www.markdown.xyz/basic-syntax#code-blocks">代码块</a> 。如果你觉得不方便，可以试试围栏代码块（fenced code blocks）。根据 Markdown 解析器或编辑器的不同，代码块的前后可以使用三个反引号（`````）或三个波浪号（~~~）来标记围栏代码块。这有什么优势吗？你不必费力缩进任何行了！</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">```</span><br><span class="line">&#123;</span><br><span class="line">  &quot;firstName&quot;: &quot;John&quot;,</span><br><span class="line">  &quot;lastName&quot;: &quot;Smith&quot;,</span><br><span class="line">  &quot;age&quot;: 25</span><br><span class="line">&#125;</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+<p>渲染效果如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;firstName&quot;: &quot;John&quot;,</span><br><span class="line">  &quot;lastName&quot;: &quot;Smith&quot;,</span><br><span class="line">  &quot;age&quot;: 25</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="语法高亮"><a href="#语法高亮" class="headerlink" title="语法高亮"></a>语法高亮</h3><p>许多 Markdown 解析器都支持围栏代码块的语法高亮功能。此功能允许你为编写代码所用的编程语言添加带颜色的语法高亮显示。如需添加语法高亮，请在围栏代码块前的反引号旁指定所用的编程语言。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">```json</span><br><span class="line">&#123;</span><br><span class="line">  &quot;firstName&quot;: &quot;John&quot;,</span><br><span class="line">  &quot;lastName&quot;: &quot;Smith&quot;,</span><br><span class="line">  &quot;age&quot;: 25</span><br><span class="line">&#125;</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+<p>渲染效果如下所示：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;firstName&quot;</span>: <span class="string">&quot;John&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;lastName&quot;</span>: <span class="string">&quot;Smith&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;age&quot;</span>: <span class="number">25</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="脚注（Footnotes）"><a href="#脚注（Footnotes）" class="headerlink" title="脚注（Footnotes）"></a>脚注（Footnotes）</h2><p>脚注（Footnotes）允许你添加注释（notes）和引用（references），而不会使文档正文混乱。当你创建脚注时，带有链接的上标数字会出现在你引用脚注的位置。 读者可以单击链接以跳转至页面底部的脚注内容处。</p>
+<p>要创建一个脚注的引用，请在方括号中添加一个插入符（caret）以及一个标识符，标识符可以是数字或单词，但不能包含空格或制表符。标识符的作用仅是将脚注的引用和脚注本身进行关联，在输出中，脚注按顺序编号。</p>
+<p>另一种创建脚注的方式是在方括号内添加一个插入符（caret）以及一个数字，后面跟着冒号和文本，即（<code>[^1]: My footnote.</code>）。这种方式让你不必在文档末尾添加脚注。你可以将脚注放到除列表（lists）、块引用（block quotes）和表格（tables）之外的任何位置上。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Here&#x27;s a simple footnote,[^1] and here&#x27;s a longer one.[^bignote]</span><br><span class="line"></span><br><span class="line">[^1]: This is the first footnote.</span><br><span class="line"></span><br><span class="line">[^bignote]: Here&#x27;s one with multiple paragraphs and code.</span><br><span class="line"></span><br><span class="line">    Indent paragraphs to include them in the footnote.</span><br><span class="line"></span><br><span class="line">    `&#123; my code &#125;`</span><br><span class="line"></span><br><span class="line">    Add as many paragraphs as you like.</span><br></pre></td></tr></table></figure>
+<p>渲染效果如下所示：</p>
+<p>Here’s a simple footnote,<a href="https://www.markdown.xyz/extended-syntax/#fn:1">1</a> and here’s a longer one.<a href="https://www.markdown.xyz/extended-syntax/#fn:bignote">2</a></p>
+<ol>
+<li><p>This is the first footnote. <a href="https://www.markdown.xyz/extended-syntax/#fnref:1">↩</a></p>
+</li>
+<li><p>Here’s one with multiple paragraphs and code.</p>
+<p>Indent paragraphs to include them in the footnote.</p>
+<p><code>&#123; my code &#125;</code></p>
+<p>Add as many paragraphs as you like. <a href="https://www.markdown.xyz/extended-syntax/#fnref:bignote">↩</a></p>
+</li>
+</ol>
 ]]></content>
       <categories>
         <category>blog</category>
