@@ -17,24 +17,26 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"nyarup.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"nyarup.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="本文大致复刻了https:&#x2F;&#x2F;markdown.xyz 中的内容，用于Markdown语法的学习与存档。  总览Markdown是一种轻量级的标记语言，创始人为John Gruber。它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML（或是HTML）文档。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。 由于Markdown的轻量化、易读易写特性，并且对于图片、图标和数">
+  <meta name="description" content="本文大致复刻了https:&#x2F;&#x2F;markdown.xyz 中的内容。  总览Markdown是一种轻量级的标记语言，创始人为John Gruber。它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML（或是HTML）文档。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。 由于Markdown的轻量化、易读易写特性，并且对于图片、图标和数学公式都有支持，许多网站都广泛使用Ma">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Markdown基本语法">
-<meta property="og:url" content="http://nyarup.github.io/2021/08/18/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/index.html">
+<meta property="og:url" content="http://nyarup.github.io/2022/03/27/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/index.html">
 <meta property="og:site_name" content="nyaruP">
-<meta property="og:description" content="本文大致复刻了https:&#x2F;&#x2F;markdown.xyz 中的内容，用于Markdown语法的学习与存档。  总览Markdown是一种轻量级的标记语言，创始人为John Gruber。它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML（或是HTML）文档。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。 由于Markdown的轻量化、易读易写特性，并且对于图片、图标和数">
+<meta property="og:description" content="本文大致复刻了https:&#x2F;&#x2F;markdown.xyz 中的内容。  总览Markdown是一种轻量级的标记语言，创始人为John Gruber。它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML（或是HTML）文档。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。 由于Markdown的轻量化、易读易写特性，并且对于图片、图标和数学公式都有支持，许多网站都广泛使用Ma">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://nyarup.github.io/2021/08/18/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Alice.jpg">
-<meta property="article:published_time" content="2021-08-18T08:31:10.000Z">
-<meta property="article:modified_time" content="2021-08-20T15:42:29.157Z">
+<meta property="og:image" content="http://nyarup.github.io/2022/03/27/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Users/toumakpoi/Desktop/1/Alice.jpg">
+<meta property="article:published_time" content="2022-03-27T09:15:12.000Z">
+<meta property="article:modified_time" content="2022-03-27T09:18:50.930Z">
 <meta property="article:author" content="nyaruP">
+<meta property="article:tag" content="markdown">
+<meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://nyarup.github.io/2021/08/18/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Alice.jpg">
+<meta name="twitter:image" content="http://nyarup.github.io/2022/03/27/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Users/toumakpoi/Desktop/1/Alice.jpg">
 
-<link rel="canonical" href="http://nyarup.github.io/2021/08/18/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">
+<link rel="canonical" href="http://nyarup.github.io/2022/03/27/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">
 
 
 <script id="page-configurations">
@@ -105,6 +107,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -119,26 +122,48 @@
     <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
-
-  </li>
         <li class="menu-item menu-item-categories">
 
     <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
 
   </li>
-        <li class="menu-item menu-item-about">
+        <li class="menu-item menu-item-tags">
 
-    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -164,7 +189,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://nyarup.github.io/2021/08/18/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="http://nyarup.github.io/2022/03/27/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://avatars.githubusercontent.com/u/88999829?s=400&u=f669a080ec0f7bb2d826b0633ae6163f8d0141b4&v=4">
@@ -186,16 +211,19 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-08-18 16:31:10" itemprop="dateCreated datePublished" datetime="2021-08-18T16:31:10+08:00">2021-08-18</time>
+              <time title="创建时间：2022-03-27 17:15:12 / 修改时间：17:18:50" itemprop="dateCreated datePublished" datetime="2022-03-27T17:15:12+08:00">2022-03-27</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-08-20 23:42:29" itemprop="dateModified" datetime="2021-08-20T23:42:29+08:00">2021-08-20</time>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
               </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/blog/" itemprop="url" rel="index"><span itemprop="name">blog</span></a>
+                </span>
+            </span>
 
           
 
@@ -209,121 +237,83 @@
 
       
         <blockquote>
-<p>本文大致复刻了<a target="_blank" rel="noopener" href="https://markdown.xyz/">https://markdown.xyz</a> 中的内容，用于Markdown语法的学习与存档。</p>
+<p>本文大致复刻了<a target="_blank" rel="noopener" href="https://markdown.xyz">https://markdown.xyz</a> 中的内容。</p>
 </blockquote>
 <h2 id="总览"><a href="#总览" class="headerlink" title="总览"></a>总览</h2><p>Markdown是一种轻量级的标记语言，创始人为John Gruber。它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML（或是HTML）文档。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。</p>
 <p>由于Markdown的轻量化、易读易写特性，并且对于图片、图标和数学公式都有支持，许多网站都广泛使用Markdown来撰写帮助文档或是用于论坛上发表消息，甚至还能被用来写电子书。</p>
 <span id="more"></span>
-
 <h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>要创建标题，请在标题文本前添加井号（即”#”）。井号的数量代表了标题的级别。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Heading level 1</span><br><span class="line">## Heading level 2</span><br><span class="line">### Heading level 3</span><br><span class="line">#### Heading level 4</span><br><span class="line">##### Heading level 5</span><br><span class="line">###### Heading level 6</span><br></pre></td></tr></table></figure>
-
-<p>还可以在文本下方添加多个等号（数量大于等于2，即”==”）来标识一级标题，添加多个减号（数量大于等于2，即”–”）来标识二级标题。</p>
+<p>还可以在文本下方添加多个等号（数量大于等于2，即”==”）来标识一级标题，添加多个减号（数量大于等于2，即”—“）来标识二级标题。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Heading level 1</span><br><span class="line">===============</span><br><span class="line"></span><br><span class="line">Heading level 2</span><br><span class="line">---------------</span><br></pre></td></tr></table></figure>
-
 <p>注意，当井号（即”#”）与标题文本间没有空格时，不同Markdown编辑器的处理方式不尽相同。所以，处于兼容考虑，我们需要在井号与标题文本间添加一个空格。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># True</span><br><span class="line">#False</span><br></pre></td></tr></table></figure>
-
 <h2 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h2><p>要创建段落，需要使用空白行将一行或多行文本进行分割。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Religions die when they are proved to be true.</span><br><span class="line"></span><br><span class="line">Science is the record of dead religions.</span><br></pre></td></tr></table></figure>
-
 <h2 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h2><p>要进行换行，需要在一行的末尾添加多个空格（数量大于等于2），然后输入回车，即可创建一个换行。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">To be or not to be: that is a question.  </span><br><span class="line">I could be bounded in a nutshell and count myself a king of infinite space. </span><br></pre></td></tr></table></figure>
-
 <p>除了行末空格外，还可以使用HTML的换行符（即”&lt;br&gt;”）。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">But a man is not made for defeat. &lt;br&gt;</span><br><span class="line">A man can be destroyed but not defeated. </span><br></pre></td></tr></table></figure>
-
 <h2 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h2><p>要进行强调，可以将文本设置为粗体或斜体。</p>
 <h3 id="粗体"><a href="#粗体" class="headerlink" title="粗体"></a>粗体</h3><p>要加粗文本，需要在加粗部分前后各添加两个星号（即”**”）或下划线（即”__”）。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">All the bright precious things fade **so fast** ... and they don&#x27;t come back. </span><br><span class="line">So we beat on, __boats against the current__, borne back ceaselessly into the past. </span><br><span class="line">Lo**li**ta</span><br></pre></td></tr></table></figure>
-
 <p>Markdown编辑器在处理单词或短语中下划线的方法并不一致，出于兼容考虑，在对单词或短语中间部分加粗时，应该使用星号。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">T**ru**e</span><br><span class="line">F__als__e</span><br></pre></td></tr></table></figure>
-
 <h3 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h3><p>要使用斜体显示文本，需要在目标文本前后添加一个星号（即”*”）或下划线（即”_”）。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Life *will change*. </span><br><span class="line">I have to _rush ahead_. </span><br><span class="line">Per*so*na</span><br></pre></td></tr></table></figure>
-
 <p>与粗体相同，Markdown编辑器处理单词或短语中下划线的方法并不一致，出于兼容考虑，在将单词或短语中间部分转换为斜体时，应该使用星号。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">T*ru*e</span><br><span class="line">F_als_e</span><br></pre></td></tr></table></figure>
-
-<h3 id="加粗斜体"><a href="#加粗斜体" class="headerlink" title="加粗斜体"></a>加粗斜体</h3><p>要同时使用粗体和斜体突出显示文本，需要在目标文本前后各添加三个星号（即”***”）或三个下划线（即”___”）。</p>
+<h3 id="加粗斜体"><a href="#加粗斜体" class="headerlink" title="加粗斜体"></a>加粗斜体</h3><p>要同时使用粗体和斜体突出显示文本，需要在目标文本前后各添加三个星号（即”<em>*</em>“）或三个下划线（即”___”）。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Rather than love, than money, than fame, ***give me truth***. </span><br><span class="line">There is ___no odor so bad___ as that which arises from goodness tainted. </span><br><span class="line">Wal***de***n</span><br></pre></td></tr></table></figure>
-
 <p>混用也是被允许的</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">What you pay for is pain. At such times **_the pain itself is the reward_** of Labour. </span><br><span class="line">A man&#x27;s opinion of himself determines _**his own destiny*__, or his final destination. </span><br></pre></td></tr></table></figure>
-
 <p>同样的，Markdown编辑器处理单词或短语中下划线的方法并不一致，出于兼容考虑，在将单词或短语中间部分转换为加粗斜体时，应该使用星号。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">T***ru***e</span><br><span class="line">F___als___e</span><br></pre></td></tr></table></figure>
-
 <h2 id="块引用"><a href="#块引用" class="headerlink" title="块引用"></a>块引用</h2><p>要创建块引用，需要在段落前添加一个大于号（即”&gt;”）。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; Dorothy followed her through many of the beautiful rooms in her castle.</span><br></pre></td></tr></table></figure>
-
 <p>块引用可以包含多个段落，只需要在段落之间的空白行各添加一个大于号（即”&gt;”）就可以了。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; Dorothy followed her through many of the beautiful rooms in her castle.</span><br><span class="line">&gt;</span><br><span class="line">&gt; The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</span><br></pre></td></tr></table></figure>
-
 <p>块引用可以嵌套，对要嵌套的段落前再添加大于号（即”&gt;”）即可。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; Dorothy followed her through many of the beautiful rooms in her castle.</span><br><span class="line">&gt;</span><br><span class="line">&gt;&gt; The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</span><br></pre></td></tr></table></figure>
-
 <p>块引用可以包含其他Markdown格式的元素，但并非所有元素都可以使用。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; #### The quarterly results look great!</span><br><span class="line">&gt;</span><br><span class="line">&gt; - Revenue was off the chart.</span><br><span class="line">&gt; - Profits were higher than ever.</span><br><span class="line">&gt;</span><br><span class="line">&gt;  *Everything* is going according to **plan**.</span><br></pre></td></tr></table></figure>
-
 <h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>Markdown可以将多个条目组织成有序或无序列表</p>
 <h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>要创建有序列表，需要在每个列表项前添加数字并紧跟一个英文句点（即”.”）。数字不影响列表序号。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. First item</span><br><span class="line">2. Second item</span><br><span class="line">3. Third item</span><br></pre></td></tr></table></figure>
-
 <h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>要创建无序列表，需要在每个列表项前面添加减号（即”-“）、加号（即”+”）或星号（即”*”）。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- First item</span><br><span class="line">- Second item</span><br><span class="line">- Third item</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">+ First item</span><br><span class="line">+ Second item</span><br><span class="line">+ Third item</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* First item</span><br><span class="line">* Second item</span><br><span class="line">* Third item</span><br></pre></td></tr></table></figure>
-
 <p>Markdown编辑器处理同一列表中混用不同标识符的方法并不一致，出于兼容考虑，再同一列表中应该只使用一种标识符。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- True</span><br><span class="line">- True</span><br><span class="line">- True</span><br><span class="line"></span><br><span class="line">- False</span><br><span class="line">+ False</span><br><span class="line">* False</span><br></pre></td></tr></table></figure>
-
 <h3 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h3><p>要嵌套列表，需要对目标列表项缩进四个空格。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. First item</span><br><span class="line">2. Second item</span><br><span class="line">    1. Indented item</span><br><span class="line">    2. Indented item</span><br><span class="line">3. Third item</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- First item</span><br><span class="line">- Second item</span><br><span class="line">    - Indented item</span><br><span class="line">    - Indented item</span><br><span class="line">- Third item</span><br></pre></td></tr></table></figure>
-
 <h3 id="添加其他元素"><a href="#添加其他元素" class="headerlink" title="添加其他元素"></a>添加其他元素</h3><p>要在保留列表连续性的同时在列表中添加另一种元素，需要将该元素缩进四个空格。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*   This is the first list item. </span><br><span class="line">*   Here&#x27;s the second list item. </span><br><span class="line"></span><br><span class="line">    I need to add another paragraph below the second list item. </span><br><span class="line"></span><br><span class="line">*   And here&#x27;s the third list item. </span><br></pre></td></tr></table></figure>
-
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*   This is the first list item. </span><br><span class="line">*   Here&#x27;s the second list item. </span><br><span class="line"></span><br><span class="line">    &gt; A blockquote would look great below the second list item. </span><br><span class="line"></span><br><span class="line">*   And here&#x27;s the third list item. </span><br></pre></td></tr></table></figure>
-
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1.  Open the file. </span><br><span class="line">2.  Find the following code block on line 21: </span><br><span class="line"></span><br><span class="line">        &lt;html&gt;</span><br><span class="line">          &lt;head&gt;</span><br><span class="line">            &lt;title&gt;Test&lt;/title&gt;</span><br><span class="line">          &lt;/head&gt;</span><br><span class="line"></span><br><span class="line">3.  Update the title to match the name of your website. </span><br></pre></td></tr></table></figure>
-
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1.  Open the file containing the Linux mascot. </span><br><span class="line">2.  Marvel at its beauty. </span><br><span class="line"></span><br><span class="line">    ![Tux, the Linux mascot](/assets/images/tux.png) </span><br><span class="line"></span><br><span class="line">3.  Close the file. </span><br></pre></td></tr></table></figure>
-
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>要将目标文本表示为代码，要将其用反引号（即”`”）包括。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">At the command prompt, type `nano`. </span><br></pre></td></tr></table></figure>
-
 <h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><p>要创建代码块，需要将代码块中每一行缩进至少四个空格或一个制表符。</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;hello world\n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>要创建分割线，需要在单独一行上使用三个以上的星号（即”***”）、减号（即”—“）或下划线（即”___”），并且不能包含其它内容。</p>
+<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>要创建分割线，需要在单独一行上使用三个以上的星号（即”<em>*</em>“）、减号（即”—-“）或下划线（即”___”），并且不能包含其它内容。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">___</span><br></pre></td></tr></table></figure>
-
 <p>出于兼容性考虑，应该在分割线前后添加空白行。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Try to put a blank line before... </span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">...and after a horizontal rule. </span><br><span class="line"></span><br><span class="line">Without blank lines, this would be a heading. </span><br><span class="line">---</span><br><span class="line">Don&#x27;t do this! </span><br></pre></td></tr></table></figure>
-
 <h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>要创建链接，需要将链接文本写在方括号中（即”[text]”），后面紧跟着写在圆括号中的URL（即”(link)”）。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">My favorite search engine is [Duck Duck Go](https://duckduckgo.com). </span><br></pre></td></tr></table></figure>
-
 <p>要为链接添加标题，将其写在””中并放在URL后面。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">My favorite search engine is [Duck Duck Go](https://duckduckgo.com &quot;The best search engine for privacy&quot;). </span><br></pre></td></tr></table></figure>
-
 <p>要将URL或电子邮件地址快速转换为链接，需要将其括在尖括号中。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;https://www.markdownguide.org&gt;</span><br><span class="line">&lt;fake@example.com&gt;</span><br></pre></td></tr></table></figure>
-
 <p>如需要强调某个链接，则要在方括号前圆括号后添加星号。如需要将链接表示为代码，则要在方括号内添加反引号。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">I love supporting the **[EFF](https://eff.org)**.</span><br><span class="line">This is the *[Markdown Guide](https://www.markdownguide.org)*.</span><br><span class="line">See the section on [`code`](#code).</span><br></pre></td></tr></table></figure>
-
 <h3 id="引用式链接"><a href="#引用式链接" class="headerlink" title="引用式链接"></a>引用式链接</h3><p>引用式链接是一种特殊类型的链接。它使得URL在Markdown中更易于显示和阅读。引用式链接由两部分组成：一部分被放置到正文文本中；另一部分被放置在文档中的其它地方，以便于阅读。</p>
 <h3 id="第一部分"><a href="#第一部分" class="headerlink" title="第一部分"></a>第一部分</h3><p>引用式链接的第一部分的格式由两组方括号组成。第一组方括号内放的是显示为链接的文本，第二组方括号内放的是一个标签，该标签用于指向您存放在文档中其它位置的链接。</p>
 <p>尽管不是必须的，但你可以在第一组和第二组方括号之间添加一个空格。第二组方括号中的标签不区分大小写，并且可以包含字母、数字、空格或标点符号。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[hobbit-hole][1]</span><br><span class="line">[hobbit-hole] [1]</span><br></pre></td></tr></table></figure>
-
 <h3 id="第二部分"><a href="#第二部分" class="headerlink" title="第二部分"></a>第二部分</h3><p>引用式链接的第二部分可以包含以下属性：</p>
 <ol>
 <li>放在方括号内的标签，以及紧跟在方括号后面的一个冒号和至少一个空格（例如[label]: ）。</li>
@@ -331,21 +321,16 @@
 <li>链接的标题（可选）（可以将其括在双引号、单引号或圆括号内）。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle</span><br><span class="line">[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle &quot;Hobbit lifestyles&quot;</span><br><span class="line">[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle &#x27;Hobbit lifestyles&#x27;</span><br><span class="line">[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle (Hobbit lifestyles)</span><br><span class="line">[1]: &lt;https://en.wikipedia.org/wiki/Hobbit#Lifestyle&gt; &quot;Hobbit lifestyles&quot;</span><br><span class="line">[1]: &lt;https://en.wikipedia.org/wiki/Hobbit#Lifestyle&gt; &#x27;Hobbit lifestyles&#x27;</span><br><span class="line">[1]: &lt;https://en.wikipedia.org/wiki/Hobbit#Lifestyle&gt; (Hobbit lifestyles)</span><br></pre></td></tr></table></figure>
-
 <p>可以将链接的第二部分放在 Markdown 文档中的任何位置。有些人将它们放在被引用的段落的后面，有些人将它们放在文档的末尾（类似尾注或脚注）。</p>
 <h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>要添加图片，首先需要添加感叹号（即”!”），然后紧跟由方括号（即”[]”）括起来的可替代文本（即图片显示失败后显示此文本），最后跟着由圆括号（即”()”）括起的的图片资源路径或URL。可以选择在圆括号内URL后添加标题。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![久遠寺有珠](Alice.jpg &quot;久遠寺有珠&quot;)</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2021/08/18/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Alice.jpg" alt="久遠寺有珠" title="久遠寺有珠"></p>
+<p><img src="/2022/03/27/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/Users/toumakpoi/Desktop/1/Alice.jpg" alt="久遠寺有珠" title="久遠寺有珠"></p>
 <h3 id="带链接的图片"><a href="#带链接的图片" class="headerlink" title="带链接的图片"></a>带链接的图片</h3><p>要为图片添加链接，需要先为图片的Markdown标记添加一个方括号，然后紧跟一个圆括号，并在圆括号中添加链接。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[![久遠寺有珠](Alice.jpg &quot;久遠寺有珠&quot;)](https://www.pixiv.net/artworks/88096398)</span><br></pre></td></tr></table></figure>
-
-<h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><p>要显示Markdown的标识字符，需要在字符前添加反斜杠（即”\“）。以下字符的显示都需要用反斜杠标识。</p>
+<h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><p>要显示Markdown的标识字符，需要在字符前添加反斜杠（即”\\”）。以下字符的显示都需要用反斜杠标识。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\ ` * _ &#123; &#125; [ ] &lt; &gt; ( ) # + - . ! |</span><br></pre></td></tr></table></figure>
-
 <h2 id="HTML标签"><a href="#HTML标签" class="headerlink" title="HTML标签"></a>HTML标签</h2><p>大多数Markdown编辑器允许在Markdown文本中添加HTML标签。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">This **word** is bold. This &lt;em&gt;word&lt;/em&gt; is italic. </span><br></pre></td></tr></table></figure>
-
 <p>出于安全原因，并非所有 Markdown 编辑器都支持在 Markdown 文档中添加 HTML，某些编辑器只支持 HTML 标签的子集。如有疑问，请查看 Markdown 编辑器的文档。</p>
 <p>对于 HTML 的块级元素 <code>&lt;div&gt;</code>、<code>&lt;table&gt;</code>、<code>&lt;pre&gt;</code> 和 <code>&lt;p&gt;</code>，请在其前后使用空行与其它内容进行分隔。尽量不要使用制表符（tabs）或空格（spaces）对 HTML 标签做缩进，否则将影响格式。</p>
 <p>在 HTML 块级标签内不能使用 Markdown 语法。例如 <code>&lt;p&gt;italic and **bold**&lt;/p&gt;</code> 将不起作用。</p>
@@ -357,6 +342,10 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/markdown/" rel="tag"># markdown</a>
+              <a href="/tags/blog/" rel="tag"># blog</a>
+          </div>
 
         
 
@@ -433,11 +422,22 @@
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
+          <a href="/archives">
           <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -463,7 +463,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -508,6 +508,10 @@
 
 
 
+  
+<script src="/js/local-search.js"></script>
+
+
 
 
 
@@ -520,6 +524,63 @@
 
 
   
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
